@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{7A0CBBA0-C449-419F-A690-FCF38BB13FBC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="NeuroOCR/Form1.cs">
+    <Files>
+      <File FileName="NeuroOCR/Form1.cs" Line="243" Column="10" />
+      <File FileName="NeuroOCR/MagicStick.cs" Line="10" Column="21" />
+      <File FileName="NeuroOCR/Neuro.cs" Line="15" Column="39" />
+      <File FileName="NeuroOCR/NeuroNet.cs" Line="117" Column="238" />
+      <File FileName="NeuroOCR/OCRPair.cs" Line="1" Column="1" />
+      <File FileName="NeuroOCR/Program.cs" Line="19" Column="1" />
+      <File FileName="NeuroOCR/TableOCR.cs" Line="20" Column="47" />
+      <File FileName="NeuroOCR/Form1.resx" Line="1" Column="1" />
+      <File FileName="NeuroOCR/Form1.Designer.cs" Line="913" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.NeuroOCR PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

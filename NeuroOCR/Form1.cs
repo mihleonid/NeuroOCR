@@ -82,7 +82,9 @@ namespace NeuroOCR
                     MkImg(file);
                 }
             }
-            catch { }
+            catch(Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void MkImg(String file)
         {
@@ -192,7 +194,7 @@ namespace NeuroOCR
             if (tmpcoordinatsintext==new Point(-1,-1)) {
                 Chop();
             }
-            try {
+            //try {
             img = Transparent2Color(ResizeImage(llb[tmpcoordinatsintext.X][tmpcoordinatsintext.Y]));
             source = (Bitmap)img.Clone();
             if (checkBox5.Checked)
@@ -200,9 +202,13 @@ namespace NeuroOCR
                 PreFormat();
             }
             pictureBox1.Image = img;
-            } catch {}
+            //} catch {}
         }
         private void Next() {
+            if (tmpcoordinatsintext == new Point(-2, -2))
+            {
+                goto e;
+            }
             if (tmpcoordinatsintext == new Point(-1, -1))
             {
                 Chop();
@@ -210,27 +216,25 @@ namespace NeuroOCR
             else
             {
                 tmpcoordinatsintext.Y += 1;
-                try
-                {
+                if((llb.Count>tmpcoordinatsintext.X)&&(llb[tmpcoordinatsintext.X].Count>tmpcoordinatsintext.Y)){
                     var tr=llb[tmpcoordinatsintext.X][tmpcoordinatsintext.Y];
-                }
-                catch {
+                }else{
                     tmpcoordinatsintext.Y = 0;
                     tmpcoordinatsintext.X += 1;
                     if (checkBox9.Checked) {
                         textBox2.Text += "\r\n";
                     }
-                    try
+                    if((llb.Count>tmpcoordinatsintext.X)&&(llb[tmpcoordinatsintext.X].Count>tmpcoordinatsintext.Y))
                     {
                         var tr = llb[tmpcoordinatsintext.X][tmpcoordinatsintext.Y];
-                    }
-                    catch
-                    {
-                        tmpcoordinatsintext = new Point(-2,-2);
+                    }else{
+                        tmpcoordinatsintext = new Point(-2, -2);
+                        goto e;
                     }
                 }
             }
             MkLetter();
+            e:;
         }
         private void Recognize() {
             if (img!=null) {
@@ -619,8 +623,8 @@ namespace NeuroOCR
         {
             var destRect = new Rectangle(0, 0, width, height);
             var destImage = new Bitmap(width, height);
-
-            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+            //notworking
+            //destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
 
             using (var graphics = Graphics.FromImage(destImage))
             {
@@ -683,7 +687,9 @@ namespace NeuroOCR
                 MkLetter();
             }
             while (tmpcoordinatsintext!=new Point(-2,-2)) {
-                button15_Click(sender, e);
+                Recognize();
+                Insert();
+                Next();
             }
         }
 
@@ -826,13 +832,11 @@ namespace NeuroOCR
                         try
                         {
                             File.Delete(Path.Combine("ocr", Path.GetFileName(fi)));
-                        }
-                        catch { }
-                        try
-                        {
                             File.Copy(fi, Path.Combine("ocr", Path.GetFileName(fi)));
                         }
-                        catch { }
+                        catch {
+                            MessageBox.Show("Copy failed");
+                        }
                     }
                 }
             }

@@ -12,7 +12,7 @@ namespace NeuroOCR
         public String name;
         public Neuro(String str) {
             name = str;
-            table = new TableOCR("ocr\\"+name+".ocr");
+            table = new TableOCR("ocr/"+name+".ocr");
         }
         public void Clever(TableOCR img, bool isTrue) {
             if (isTrue)
