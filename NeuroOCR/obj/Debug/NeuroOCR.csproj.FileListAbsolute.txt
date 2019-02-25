@@ -1,0 +1,10 @@
+C:\Users\Leonid\source\repos\NeuroOCR\NeuroOCR\bin\Debug\NeuroOCR.exe.config
+C:\Users\Leonid\source\repos\NeuroOCR\NeuroOCR\bin\Debug\NeuroOCR.exe
+C:\Users\Leonid\source\repos\NeuroOCR\NeuroOCR\bin\Debug\NeuroOCR.pdb
+C:\Users\Leonid\source\repos\NeuroOCR\NeuroOCR\obj\Debug\NeuroOCR.csprojResolveAssemblyReference.cache
+C:\Users\Leonid\source\repos\NeuroOCR\NeuroOCR\obj\Debug\NeuroOCR.Form1.resources
+C:\Users\Leonid\source\repos\NeuroOCR\NeuroOCR\obj\Debug\NeuroOCR.Properties.Resources.resources
+C:\Users\Leonid\source\repos\NeuroOCR\NeuroOCR\obj\Debug\NeuroOCR.csproj.GenerateResource.cache
+C:\Users\Leonid\source\repos\NeuroOCR\NeuroOCR\obj\Debug\NeuroOCR.csproj.CoreCompileInputs.cache
+C:\Users\Leonid\source\repos\NeuroOCR\NeuroOCR\obj\Debug\NeuroOCR.exe
+C:\Users\Leonid\source\repos\NeuroOCR\NeuroOCR\obj\Debug\NeuroOCR.pdb
